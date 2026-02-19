@@ -2,6 +2,8 @@
 
 A Vue 3 + TypeScript image slider that renders in a single canvas. Drag horizontally to change images.
 
+**Live preview:** [https://devcaress.github.io/canvas-image-slider/](https://devcaress.github.io/canvas-image-slider/)
+
 ## Run the project
 
 ```bash

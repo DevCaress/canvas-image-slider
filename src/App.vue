@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import CanvasImageSlider from './components/CanvasImageSlider.vue'
-import { SLIDER_IMAGE_URLS } from './config/images'
+import { SLIDER_IMAGE_URLS, resolveImageUrl } from './config/images'
 
 const imageUrls = ref<string[]>([...SLIDER_IMAGE_URLS])
 const newUrl = ref('')
@@ -13,7 +13,7 @@ function removeImage(index: number) {
 function addImage() {
   const url = newUrl.value.trim()
   if (!url) return
-  imageUrls.value.push(url)
+  imageUrls.value.push(resolveImageUrl(url))
   newUrl.value = ''
 }
 </script>
